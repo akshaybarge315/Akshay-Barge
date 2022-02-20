@@ -1,0 +1,454 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", arial;
+  height: 100vh;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 90%;
+}
+
+.nav-container {
+  background-color: #651fff;
+
+  a {
+    color: #fff;
+  }
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2em;
+
+  .logo {
+    color: #6bf0f4;
+    font-weight: 600;
+    font-size: 1.2em;
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  ul {
+    display: flex;
+    a {
+      display: block;
+      padding: 0 1em;
+
+      &:hover {
+        color: #6bf0f4;
+      }
+    }
+  }
+}
+
+.social-header,
+.hero-design {
+  display: none;
+}
+
+.hero {
+  background-color: #6e00ff;
+  color: white;
+  display: grid;
+  padding: 4em;
+  text-align: center;
+}
+
+.sub {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+
+  span {
+    margin-right: 0.5em;
+  }
+
+  p {
+    color: #ff64cd;
+    font-weight: 600;
+  }
+}
+
+.scroll {
+  width: 30px;
+  margin-top: 2em;
+}
+
+section {
+  padding: 4em 2em;
+  text-align: center;
+}
+
+.about {
+  position: relative;
+}
+
+.about::before {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: #ffc5ec;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+.about-head {
+  font-weight: 600;
+  color: #7140f9;
+  letter-spacing: 0.2em;
+  font-weight: 600;
+  display: block;
+}
+
+.about-desc {
+  color: #3b3b3b;
+  margin-bottom: 3em;
+  line-height: 1.8em;
+}
+
+.skills {
+  background: #ff64cd;
+}
+
+.skillcontainer ul li {
+  background: white;
+  padding: 2em;
+  border-radius: 1em;
+  margin-bottom: 1em;
+}
+
+.icon-container {
+  height: 100px;
+  display: grid;
+  place-content: center;
+  margin: 0 auto;
+
+  &.one {
+    width: 80px;
+  }
+
+  &.two {
+    width: 90px;
+  }
+
+  &.three {
+    width: 80px;
+  }
+}
+
+.skilltitle {
+  font-weight: 600;
+}
+
+.skilldesc {
+  margin-bottom: 2em;
+}
+
+.projects {
+  background: #f7f7f7;
+}
+
+.projectcontainer a img {
+  border-radius: 1em;
+  margin-bottom: 2em;
+}
+
+.projectcontainer a p {
+  display: none;
+}
+
+.projectcontainer {
+  .proTitle {
+    font-weight: 600;
+  }
+}
+
+.contact {
+  background: #fff;
+
+  .inner {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.footer-distributed {
+  background-color: #651fff;
+  color: #f7f7f7;
+  text-align: center;
+  padding: 2em 2em 1em 2em;
+}
+
+.bottom {
+  p {
+    color: #6bf0f4;
+    font-size: 0.8em;
+    font-weight: 200;
+  }
+}
+
+.center {
+  i {
+    color: #fff;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+  }
+}
+
+.top {
+  .contact-items {
+    align-items: center;
+
+    i {
+      color: #651fff;
+      background-color: #fff;
+      padding: 0.5em;
+      border-radius: 40%;
+    }
+
+    a {
+      color: #fff;
+    }
+
+    p {
+      letter-spacing: 0.1em;
+      font-size: 0.7em;
+    }
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .about,
+  .projects {
+    text-align: left;
+  }
+
+  .about,
+  .projectcontainer {
+    display: grid;
+    grid-template-columns: 40% auto;
+  }
+
+  .left,
+  .project-left {
+    display: grid;
+    place-content: center;
+  }
+
+  .top {
+    display: grid;
+    font-size: 1em;
+  }
+
+  .right {
+    margin-left: 2em;
+    margin-top: 1em;
+  }
+
+  .skills {
+    margin-top: -5em;
+    margin-bottom: -7em;
+    padding-top: 7em;
+  }
+
+  .skillcontainer ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 1em;
+  }
+
+  .projects {
+    padding-top: 7em;
+
+    .proTitle {
+      font-weight: 600;
+      font-size: 1.2em;
+    }
+  }
+
+  .projectcontainer img {
+    margin-left: 2em;
+  }
+
+  .projectcontainer a p {
+    display: block;
+    text-decoration: underline;
+    color: #651fff;
+    font-weight: 600;
+  }
+}
+
+@media only screen and (min-width: 1050px) {
+  .hero {
+    height: 90vh;
+  }
+  .nav-container {
+    display: grid;
+    grid-template-columns: 66% auto;
+    background: unset;
+
+    header {
+      background: #651fff;
+    }
+  }
+
+  .top {
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+
+  .contact-items {
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+
+  .sub {
+    justify-content: left;
+  }
+
+  header {
+    padding: 2em 4em 2em 6em;
+  }
+  .social-header {
+    padding: 2em 4em 2em 0;
+  }
+
+  section {
+    padding: 4em;
+  }
+
+  .social-header {
+    display: block;
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+      float: right;
+    }
+
+    i {
+      color: #000;
+      font-size: 2em;
+      margin-left: 1em;
+    }
+  }
+
+  .hero {
+    display: grid;
+    grid-template-columns: 66% auto;
+    background: unset;
+    padding: 0;
+
+    .content {
+      background: #6e00ff;
+      padding: 6em 8em 6em 4em;
+      text-align: left;
+
+      h1 {
+        font-size: 3em;
+        line-height: 1.2em;
+      }
+    }
+  }
+
+  .sub {
+    margin: unset;
+  }
+
+  .hero-design {
+    display: unset;
+    margin-left: -50%;
+    margin-top: 15%;
+    width: 100%;
+  }
+
+  .projects img {
+    float: right;
+    max-width: 500px;
+  }
+}
+
+@media only screen and (min-width: 1250px) {
+  header {
+    padding: 2em 2em 2em 10em;
+  }
+
+  .social-header {
+    padding: 2em 10em 2em 0em;
+  }
+
+  section {
+    padding: 10em 10em 4em 10em;
+  }
+
+  .hero .content {
+    padding: 6em 8em 6em 10em;
+  }
+  .content .sub {
+    text-align: left;
+  }
+}
+
+@media only screen and (min-width: 1550px) {
+  header {
+    padding: 2em 2em 2em 20em;
+  }
+
+  .social-header {
+    padding: 2em 20em 2em 0em;
+  }
+
+  section {
+    padding: 6em 20em 4em 20em;
+  }
+
+  .hero .content {
+    padding: 9em 20em 6em 20em;
+  }
+}
+
+.circle {
+  animation: circleAnim 1s infinite alternate-reverse;
+}
+
+@keyframes circleAnim {
+  from {
+    transform: translate(262px, 798px);
+    z-index: 5;
+  }
+  to {
+    transform: translate(262px, 830px);
+  }
+}
